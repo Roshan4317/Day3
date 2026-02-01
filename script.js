@@ -24,14 +24,80 @@
 // ***********************************************************************************************************
 // Print Inverted Right-Angled Star Triangle
 
-function invertedRATriangle(row) {
-  for (let i = row; i >= 1; i--) {
-    let star = "";
-    for (let j = i; j >= i; j--) {
+// function invertedRATriangle(row) {
+//   for (let i = row; i >= 1; i--) {
+//     let star = "";
+//     for (let j = i; j >= i; j--) {
+//       star += "*";
+//     }
+//     console.log(star);
+//   }
+// }
+
+// console.log(invertedRATriangle(5));
+
+// ***********************************************************************************************************
+
+// Pyramid
+
+// let rows = 5;
+
+// for (let i = 1; i <= rows; i++) {
+//   let star = "";
+
+//   for (let j = 1; j <= rows + i - 1; j++) {
+//     if (j <= rows - i) {
+//       star += " ";
+//     } else {
+//       star += "*";
+//     }
+//   }
+
+//   console.log(star);
+// }
+
+// ***********************************************************************************************************
+// Print Hollow Pyramid
+
+const row = 5;
+
+for (let i = 1; i <= row; i++) {
+  let star = "";
+
+  for (let j = 1; j <= row + i - 1; j++) {
+    if (
+      j === row - i + 1 || // left edge
+      j === row + i - 1 ||
+      i === row
+    ) {
       star += "*";
+    } else {
+      star += " ";
     }
-    console.log(star);
   }
+
+  console.log(star);
 }
 
-console.log(invertedRATriangle(5));
+(5, 4, 3, 2, 1);
+(5, 6, 7, 8, 9);
+
+// ***********************************************************************************************************
+
+// Inverted Pyramid
+
+// let rows = 5;
+
+// for (let i = rows; i >= 1; i--) {
+//   let star = "";
+
+//   for (let j = 1; j <= rows + i - 1; j++) {
+//     if (j <= rows - i) {
+//       star += " ";
+//     } else {
+//       star += "*";
+//     }
+//   }
+
+//   console.log(star);
+// }
