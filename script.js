@@ -59,17 +59,40 @@
 // ***********************************************************************************************************
 // Print Hollow Pyramid
 
-const row = 5;
+// const row = 5;
 
-for (let i = 1; i <= row; i++) {
+// for (let i = 1; i <= row; i++) {
+//   let star = "";
+
+//   for (let j = 1; j <= row + i - 1; j++) {
+//     if (
+//       j === row - i + 1 || // left edge
+//       j === row + i - 1 ||
+//       i === row
+//     ) {
+//       star += "*";
+//     } else {
+//       star += " ";
+//     }
+//   }
+
+//   console.log(star);
+// }
+
+(9, 8, 7, 6, 5);
+
+// ***********************************************************************************************************
+
+// j===rows-i+1
+// Inverted Pyramid
+
+let rows = 5;
+
+for (let i = rows; i >= 1; i--) {
   let star = "";
 
-  for (let j = 1; j <= row + i - 1; j++) {
-    if (
-      j === row - i + 1 || // left edge
-      j === row + i - 1 ||
-      i === row
-    ) {
+  for (let j = 1; j <= rows + i - 1; j++) {
+    if (i === rows || j === rows - i + 1 || j === rows + i - 1) {
       star += "*";
     } else {
       star += " ";
@@ -78,26 +101,3 @@ for (let i = 1; i <= row; i++) {
 
   console.log(star);
 }
-
-(5, 4, 3, 2, 1);
-(5, 6, 7, 8, 9);
-
-// ***********************************************************************************************************
-
-// Inverted Pyramid
-
-// let rows = 5;
-
-// for (let i = rows; i >= 1; i--) {
-//   let star = "";
-
-//   for (let j = 1; j <= rows + i - 1; j++) {
-//     if (j <= rows - i) {
-//       star += " ";
-//     } else {
-//       star += "*";
-//     }
-//   }
-
-//   console.log(star);
-// }
